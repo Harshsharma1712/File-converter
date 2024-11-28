@@ -1,0 +1,20 @@
+{
+  "name": "01-file-converter",
+  "version": "1.0.0",
+  "description": "A file converter",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "pdfkit": "^0.15.1",
+    "word-extractor": "^1.0.4"
+  }
+}
