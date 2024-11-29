@@ -11,14 +11,19 @@ const upload = multer({ dest: "uploads/" });
 
 // this section handle file conversion routes
 
-// Render the index page
+// Render the main page
 router.get("/", (req, res) => {
-    res.render("index");
+    res.render("main");
 });
 
-// Render the index page
-router.get("/main", (req, res) => {
-    res.render("main");
+// // Render the index page
+// router.get("/main", (req, res) => {
+//     res.render("main");
+// });
+
+// Route for Word to PDF converter
+router.get('/wordToPdf', (req, res) => {
+    res.render('wordToPdf'); // Render the 'wordToPdf.ejs' file
 });
 
 // Handle file conversion
@@ -56,9 +61,9 @@ router.post("/convert-word", upload.single("wordFile"), (req, res) => {
             console.error(error);
             res.status(500).send("An error occurred while converting the Word file.");
         })
-        .finally(() => {
-            fs.unlinkSync(inputPath); // Cleanup uploaded Word file
-        });
+        // .finally(() => {
+        //     fs.unlinkSync(inputPath); // Cleanup uploaded Word file
+        // });
 });
 
 

@@ -3,18 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>File Converter</title>
 </head>
 <body>
-    
-    <div class="card" style="width: 18rem;">
-        <img src="/public/images/wordToPdf.jpg" class="card-img-top" >
-        <div class="card-body">
-          <h5 class="card-title">Word to Pdf</h5>
-          <p class="card-text">Easily convert your word file into pdf file</p>
-          <a href="#" class="btn btn-primary">convert</a>
-        </div>
-      </div>
+    <header class="bg-primary text-white text-center py-5">
+        <h1>File Converter</h1>
+        <p class="lead">Convert your files effortlessly with our easy-to-use tools</p>
+    </header>
 
+    <main class="container my-5">
+        <div class="row text-center">
+            <!-- Word to PDF Option -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <img src="/images/wordToPdf.jpg"  class="card-img-top w-50 h-auto" alt="Word to PDF">
+                    <div class="card-body">
+                        <h5 class="card-title">Word to PDF</h5>
+                        <p class="card-text">Easily convert your Word files to PDF with just one click.</p>
+                        <a href="/wordToPdf" class="btn btn-primary">Convert Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image to PDF Option -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow">
+                    <img src="/images/imageToPdf.jpg" class="card-img-top" alt="Image to PDF">
+                    <div class="card-body">
+                        <h5 class="card-title">Image to PDF</h5>
+                        <p class="card-text">Convert your images into a single PDF file in seconds.</p>
+                        <a href="#" class="btn btn-primary">Convert Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2024 File Converter. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
