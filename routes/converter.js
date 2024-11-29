@@ -16,17 +16,17 @@ router.get("/", (req, res) => {
     res.render("main");
 });
 
-// // Render the index page
-// router.get("/main", (req, res) => {
-//     res.render("main");
-// });
-
 // Route for Word to PDF converter
 router.get('/wordToPdf', (req, res) => {
     res.render('wordToPdf'); // Render the 'wordToPdf.ejs' file
 });
 
-// Handle file conversion
+// Rout for image to PDF converter
+router.get('/imageToPdf', (req, res) => {
+    res.render('imageToPdf'); // Render the 'wordToPdf.ejs' file
+});
+
+// Handle file conversion image to pdf
 router.post("/convert", upload.array("images", 10), (req, res) => {
     const outputPath = `converted/${Date.now()}_output.pdf`;
 
