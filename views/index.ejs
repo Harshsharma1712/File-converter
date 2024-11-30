@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-
-    <div class="container">
-
-        <%- include('./partials/head.ejs') %>
+<body class="bg-light">
+    <div class="container mt-5">
 
         <% if (locals.message) { %>
-            <p><strong><%= message %></strong></p>
-            <p><a href="<%= downloadLink %>">Download PDF</a></p>
+            <div class="alert alert-success text-center" role="alert">
+                <p class="mb-2"><strong><%= message %></strong></p>
+                <a href="<%= downloadLink %>" class="btn btn-primary">Download PDF</a>
+            </div>
         <% } %>
-       
-        <%- include('./partials/script.ejs') %>
-
     </div>
 
-   
-
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
