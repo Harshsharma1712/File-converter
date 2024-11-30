@@ -61,9 +61,9 @@ router.post("/convert-word", upload.single("wordFile"), (req, res) => {
             console.error(error);
             res.status(500).send("An error occurred while converting the Word file.");
         })
-        // .finally(() => {
-        //     fs.unlinkSync(inputPath); // Cleanup uploaded Word file
-        // });
+        .finally(() => {
+            fs.unlinkSync(inputPath); // Cleanup uploaded Word file
+        });
 });
 
 
@@ -82,7 +82,7 @@ router.get("/download/:fileName", (req, res) => {
         if (err) {
             console.error(err);
         }
-        // fs.unlinkSync(filePath); // Optional cleanup
+        fs.unlinkSync(filePath); // Optional cleanup
     });
 });
 
